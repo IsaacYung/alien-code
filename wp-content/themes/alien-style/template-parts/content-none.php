@@ -3,7 +3,7 @@
  * The template part for displaying a message that posts cannot be found
  *
  * @package WordPress
- * @subpackage Twenty_Sixteen
+ * @subpackage Alien_Code
  * @since Alien Style 1.0
  */
 ?>

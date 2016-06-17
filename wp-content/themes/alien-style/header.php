@@ -5,7 +5,7 @@
  * Displays all of the head element and everything up until the "site-content" div.
  *
  * @package WordPress
- * @subpackage Twenty_Sixteen
+ * @subpackage Alien_Code
  * @since Alien Style 1.0
  */
 

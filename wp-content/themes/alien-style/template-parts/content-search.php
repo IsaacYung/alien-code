@@ -3,7 +3,7 @@
  * The template part for displaying results in search pages
  *
  * @package WordPress
- * @subpackage Twenty_Sixteen
+ * @subpackage Alien_Code
  * @since Alien Style 1.0
  */
 ?>

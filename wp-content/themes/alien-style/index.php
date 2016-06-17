@@ -10,7 +10,7 @@
  * @link http://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage Twenty_Sixteen
+ * @subpackage Alien_Code
  * @since Alien Style 1.0
  */
 

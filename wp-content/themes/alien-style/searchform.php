@@ -3,7 +3,7 @@
  * Template for displaying search forms in Alien Style
  *
  * @package WordPress
- * @subpackage Twenty_Sixteen
+ * @subpackage Alien_Code
  * @since Alien Style 1.0
  */
 ?>

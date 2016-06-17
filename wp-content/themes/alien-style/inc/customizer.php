@@ -3,7 +3,7 @@
  * Alien Style Customizer functionality
  *
  * @package WordPress
- * @subpackage Twenty_Sixteen
+ * @subpackage Alien_Code
  * @since Alien Style 1.0
  */
 

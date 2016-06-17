@@ -3,7 +3,7 @@
  * The template for displaying 404 pages (not found)
  *
  * @package WordPress
- * @subpackage Twenty_Sixteen
+ * @subpackage Alien_Code
  * @since Alien Style 1.0
  */
 
