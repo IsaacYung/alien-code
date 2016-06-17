@@ -25,7 +25,7 @@
  * @since Alien Style 1.0
  */
 
-if ( ! function_exists( 'twentysixteen_setup' ) ) :
+if ( ! function_exists( 'ac_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -33,18 +33,18 @@ if ( ! function_exists( 'twentysixteen_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  *
- * Create your own twentysixteen_setup() function to override in a child theme.
+ * Create your own ac_setup() function to override in a child theme.
  *
  * @since Alien Style 1.0
  */
-function twentysixteen_setup() {
+function ac_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
 	 * If you're building a theme based on Alien Style, use a find and replace
-	 * to change 'twentysixteen' to the name of your theme in all the template files
+	 * to change 'ac' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( 'twentysixteen', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'ac', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -78,8 +78,8 @@ function twentysixteen_setup() {
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'twentysixteen' ),
-		'social'  => __( 'Social Links Menu', 'twentysixteen' ),
+		'primary' => __( 'Primary Menu', 'ac' ),
+		'social'  => __( 'Social Links Menu', 'ac' ),
 	) );
 
 	/*
@@ -115,13 +115,13 @@ function twentysixteen_setup() {
 	 * This theme styles the visual editor to resemble the theme style,
 	 * specifically font, colors, icons, and column width.
 	 */
-	add_editor_style( array( 'css/editor-style.css', twentysixteen_fonts_url() ) );
+	add_editor_style( array( 'css/editor-style.css', ac_fonts_url() ) );
 
 	// Indicate widget sidebars can use selective refresh in the Customizer.
 	add_theme_support( 'customize-selective-refresh-widgets' );
 }
-endif; // twentysixteen_setup
-add_action( 'after_setup_theme', 'twentysixteen_setup' );
+endif; // ac_setup
+add_action( 'after_setup_theme', 'ac_setup' );
 
 /**
  * Sets the content width in pixels, based on the theme's design and stylesheet.
@@ -132,10 +132,10 @@ add_action( 'after_setup_theme', 'twentysixteen_setup' );
  *
  * @since Alien Style 1.0
  */
-function twentysixteen_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'twentysixteen_content_width', 840 );
+function ac_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'ac_content_width', 840 );
 }
-add_action( 'after_setup_theme', 'twentysixteen_content_width', 0 );
+add_action( 'after_setup_theme', 'ac_content_width', 0 );
 
 /**
  * Registers a widget area.
@@ -144,11 +144,11 @@ add_action( 'after_setup_theme', 'twentysixteen_content_width', 0 );
  *
  * @since Alien Style 1.0
  */
-function twentysixteen_widgets_init() {
+function ac_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'twentysixteen' ),
+		'name'          => __( 'Sidebar', 'ac' ),
 		'id'            => 'sidebar-1',
-		'description'   => __( 'Add widgets here to appear in your sidebar.', 'twentysixteen' ),
+		'description'   => __( 'Add widgets here to appear in your sidebar.', 'ac' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -156,9 +156,9 @@ function twentysixteen_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Content Bottom 1', 'twentysixteen' ),
+		'name'          => __( 'Content Bottom 1', 'ac' ),
 		'id'            => 'sidebar-2',
-		'description'   => __( 'Appears at the bottom of the content on posts and pages.', 'twentysixteen' ),
+		'description'   => __( 'Appears at the bottom of the content on posts and pages.', 'ac' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -166,45 +166,35 @@ function twentysixteen_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Content Bottom 2', 'twentysixteen' ),
+		'name'          => __( 'Content Bottom 2', 'ac' ),
 		'id'            => 'sidebar-3',
-		'description'   => __( 'Appears at the bottom of the content on posts and pages.', 'twentysixteen' ),
+		'description'   => __( 'Appears at the bottom of the content on posts and pages.', 'ac' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
 }
-add_action( 'widgets_init', 'twentysixteen_widgets_init' );
+add_action( 'widgets_init', 'ac_widgets_init' );
 
-if ( ! function_exists( 'twentysixteen_fonts_url' ) ) :
+if ( ! function_exists( 'ac_fonts_url' ) ) :
 /**
  * Register Google fonts for Alien Style.
  *
- * Create your own twentysixteen_fonts_url() function to override in a child theme.
+ * Create your own ac_fonts_url() function to override in a child theme.
  *
  * @since Alien Style 1.0
  *
  * @return string Google fonts URL for the theme.
  */
-function twentysixteen_fonts_url() {
+function ac_fonts_url() {
 	$fonts_url = '';
 	$fonts     = array();
 	$subsets   = 'latin,latin-ext';
 
-	/* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== _x( 'on', 'Merriweather font: on or off', 'twentysixteen' ) ) {
-		$fonts[] = 'Merriweather:400,700,900,400italic,700italic,900italic';
-	}
-
 	/* translators: If there are characters in your language that are not supported by Montserrat, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== _x( 'on', 'Montserrat font: on or off', 'twentysixteen' ) ) {
-		$fonts[] = 'Montserrat:400,700';
-	}
-
-	/* translators: If there are characters in your language that are not supported by Inconsolata, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== _x( 'on', 'Inconsolata font: on or off', 'twentysixteen' ) ) {
-		$fonts[] = 'Inconsolata:400';
+	if ( 'off' !== _x( 'on', 'Ubuntu font: on or off', 'ac' ) ) {
+		$fonts[] = 'Ubuntu:400,700';
 	}
 
 	if ( $fonts ) {
@@ -219,38 +209,16 @@ function twentysixteen_fonts_url() {
 endif;
 
 /**
- * Handles JavaScript detection.
- *
- * Adds a `js` class to the root `<html>` element when JavaScript is detected.
- *
- * @since Alien Style 1.0
- */
-function twentysixteen_javascript_detection() {
-	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
-}
-add_action( 'wp_head', 'twentysixteen_javascript_detection', 0 );
-
-/**
  * Enqueues scripts and styles.
  *
  * @since Alien Style 1.0
  */
-function twentysixteen_scripts() {
+function ac_scripts() {
 	// Add custom fonts, used in the main stylesheet.
-	wp_enqueue_style( 'twentysixteen-fonts', twentysixteen_fonts_url(), array(), null );
+	wp_enqueue_style( 'ac-fonts', ac_fonts_url(), array(), null );
 
-	// Add Genericons, used in the main stylesheet.
-	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.4.1' );
-
-	// Theme stylesheet.
-	wp_enqueue_style( 'twentysixteen-style', get_stylesheet_uri() );
-
-	wp_localize_script( 'twentysixteen-script', 'screenReaderText', array(
-		'expand'   => __( 'expand child menu', 'twentysixteen' ),
-		'collapse' => __( 'collapse child menu', 'twentysixteen' ),
-	) );
 }
-add_action( 'wp_enqueue_scripts', 'twentysixteen_scripts' );
+add_action( 'wp_enqueue_scripts', 'ac_scripts' );
 
 /**
  * Custom template tags for this theme.
