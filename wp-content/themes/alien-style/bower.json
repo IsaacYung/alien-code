@@ -1,0 +1,20 @@
+{
+  "name": "alien-style-wordpress",
+  "description": "Alien Style theme",
+  "main": "index.js",
+  "authors": [
+    "Isaac Yung Lopes"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/IsaacYung/alien-code",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "foundation": "https://github.com/zurb/bower-foundation.git#5.5.3"
+  }
+}
