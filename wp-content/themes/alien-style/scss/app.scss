@@ -46,7 +46,11 @@
 
 
 /* ------------ General styles ------------- */
+@import 'general/mixins';
 @import 'general/iconfont';
+@import 'general/header';
+@import 'general/standard';
+@import 'general/search';
 
 /* ------------ Widgets ------------- */
 

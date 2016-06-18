@@ -1,0 +1,28 @@
+.site-header {
+  background-color: $secondary-color;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+
+  .site-header-main {
+    .categories {
+      display: block;
+      font-size: 3rem;
+      margin-top: 1.6rem;
+      margin-right: 2rem;
+
+      i {
+        color: $white;
+      }
+    }
+  }
+
+  .search-container {
+    padding-top: 2.5rem;
+
+    .search-div {
+      margin: 0 auto;
+      width: 24rem;
+    }
+  }
+}

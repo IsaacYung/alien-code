@@ -25,6 +25,10 @@
  * @since Alien Style 1.0
  */
 
+ include_once get_stylesheet_directory() . "/lib/structure/script.php";
+ include_once get_stylesheet_directory() . "/lib/structure/head.php";
+ include_once get_stylesheet_directory() . "/lib/structure/widget.php";
+
 if ( ! function_exists( 'ac_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -136,89 +140,6 @@ function ac_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'ac_content_width', 840 );
 }
 add_action( 'after_setup_theme', 'ac_content_width', 0 );
-
-/**
- * Registers a widget area.
- *
- * @link https://developer.wordpress.org/reference/functions/register_sidebar/
- *
- * @since Alien Style 1.0
- */
-function ac_widgets_init() {
-	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'ac' ),
-		'id'            => 'sidebar-1',
-		'description'   => __( 'Add widgets here to appear in your sidebar.', 'ac' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-
-	register_sidebar( array(
-		'name'          => __( 'Content Bottom 1', 'ac' ),
-		'id'            => 'sidebar-2',
-		'description'   => __( 'Appears at the bottom of the content on posts and pages.', 'ac' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-
-	register_sidebar( array(
-		'name'          => __( 'Content Bottom 2', 'ac' ),
-		'id'            => 'sidebar-3',
-		'description'   => __( 'Appears at the bottom of the content on posts and pages.', 'ac' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-}
-add_action( 'widgets_init', 'ac_widgets_init' );
-
-if ( ! function_exists( 'ac_fonts_url' ) ) :
-/**
- * Register Google fonts for Alien Style.
- *
- * Create your own ac_fonts_url() function to override in a child theme.
- *
- * @since Alien Style 1.0
- *
- * @return string Google fonts URL for the theme.
- */
-function ac_fonts_url() {
-	$fonts_url = '';
-	$fonts     = array();
-	$subsets   = 'latin,latin-ext';
-
-	/* translators: If there are characters in your language that are not supported by Montserrat, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== _x( 'on', 'Ubuntu font: on or off', 'ac' ) ) {
-		$fonts[] = 'Ubuntu:400,700';
-	}
-
-	if ( $fonts ) {
-		$fonts_url = add_query_arg( array(
-			'family' => urlencode( implode( '|', $fonts ) ),
-			'subset' => urlencode( $subsets ),
-		), 'https://fonts.googleapis.com/css' );
-	}
-
-	return $fonts_url;
-}
-endif;
-
-/**
- * Enqueues scripts and styles.
- *
- * @since Alien Style 1.0
- */
-function ac_scripts() {
-	// Add custom fonts, used in the main stylesheet.
-	wp_enqueue_style( 'ac-fonts', ac_fonts_url(), array(), null );
-
-}
-add_action( 'wp_enqueue_scripts', 'ac_scripts' );
 
 /**
  * Custom template tags for this theme.

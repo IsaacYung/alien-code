@@ -1,0 +1,22 @@
+.search-form {
+  .search-field {
+    width: 20rem;
+    height: 2.5rem;
+    margin: 0;
+    float: left;
+    border: 0;
+    background-color: $white;
+    padding-left: 1.4rem;
+    box-shadow: none;
+    @include border-radius-left(50px);
+  }
+
+  .search-submit {
+    height: 2.5rem;
+    padding: 6px 1rem;
+    color: $dark-gray;
+    font-size: 1.5rem;
+    background-color: $white;
+    @include border-radius-right(50px);
+  }
+}

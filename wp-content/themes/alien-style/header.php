@@ -10,6 +10,7 @@
  */
 
 ?><!DOCTYPE html>
+
 <html <?php language_attributes(); ?> class="no-js">
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -24,24 +25,19 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<div class="site-inner">
-		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentysixteen' ); ?></a>
-
-		<header id="masthead" class="site-header" role="banner">
+		<header id="masthead" class="site-header row full-width header" role="banner">
 			<div class="site-header-main">
-				<div class="site-branding">
-					<?php twentysixteen_the_custom_logo(); ?>
-
-					<?php if ( is_front_page() && is_home() ) : ?>
-						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<?php else : ?>
-						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-					<?php endif;
-
-					$description = get_bloginfo( 'description', 'display' );
-					if ( $description || is_customize_preview() ) : ?>
-						<p class="site-description"><?php echo $description; ?></p>
-					<?php endif; ?>
-				</div><!-- .site-branding -->
+				<div class="site-branding medium-3 columns">
+					<a href="#"><img src="<?php echo get_template_directory_uri() . '/images/alien.png' ?>" alt="" /></a>
+				</div>
+				<div class="search-container medium-6 columns">
+					<?php get_search_form() ?>
+				</div>
+				<div class="medium-3 columns text-right">
+					<div class="categories">
+						<a href="#"><i class="icon-list2"></i></a>
+					</div>
+				</div>
 
 				<?php if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) ) : ?>
 					<button id="menu-toggle" class="menu-toggle"><?php _e( 'Menu', 'twentysixteen' ); ?></button>
