@@ -4,3 +4,4 @@
 //=require ../bower_components/foundation/js/foundation/foundation.js
 //=require ../bower_components/foundation/js/foundation/foundation.topbar.js
 //=require app/ga.js
+//=require app/menu.js

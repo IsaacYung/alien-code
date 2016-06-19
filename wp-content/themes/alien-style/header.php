@@ -26,11 +26,11 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<div class="site-inner">
-		<header id="masthead" class="site-header row full-width header" role="banner">
+		<header id="masthead" class="site-header row full-width header on-top" role="banner">
 			<div class="site-header-main">
-				<div class="site-branding medium-3 columns">
-					<a href="#" class="show-for-medium-up"><img src="<?php echo get_template_directory_uri() . '/images/alien.png' ?>" alt="" /></a>
-					<a href="#" class="show-for-small-only text-center"><img src="<?php echo get_template_directory_uri() . '/images/alien-mobile.png' ?>" alt="" /></a>
+				<div class="site-branding medium-3 columns small-text-center medium-text-left">
+					<a href="#" class="logo-linear "><img src="<?php echo get_template_directory_uri() . '/images/alien.png' ?>" alt="" /></a>
+					<a href="#" class="logo-tall"><img src="<?php echo get_template_directory_uri() . '/images/alien-mobile.png' ?>" alt="" /></a>
 				</div>
 				<div class="search-container medium-6 columns">
 					<?php get_search_form() ?>
@@ -38,7 +38,6 @@
 				<div class="medium-3 columns text-right">
 					<div class="categories">
 						<a href="#" class="large show-for-medium-up"><i class="icon-list2"></i></a>
-						<a href="#" class="mobile show-for-small-only text-center">Categories</a>
 					</div>
 				</div>
 

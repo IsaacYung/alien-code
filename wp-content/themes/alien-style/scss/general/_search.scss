@@ -8,6 +8,8 @@
     background-color: $white;
     padding-left: 1.4rem;
     box-shadow: none;
+    font-weight: bold;
+    color: $dark-gray;
     @include border-radius-left(50px);
   }
 

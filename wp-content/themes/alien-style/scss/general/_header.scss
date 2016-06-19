@@ -1,9 +1,55 @@
+.site-inner .off-top {
+  height: 80px;
+  @include transition(height 1s ease);
+
+  .search-container {
+    padding-top: .8rem;
+      @include transition(padding-top 1s ease);
+  }
+
+  .site-header-main .categories {
+    @include transition(margin-top 1s ease);
+    margin-top: 2px;
+  }
+}
+
+.site-inner .on-top {
+  height: 138px;
+  @include transition(height 1s ease);
+
+
+  .search-container {
+      @include transition(padding-top 1s ease);
+  }
+
+  .site-header-main .categories {
+    @include transition(margin-top 1s ease);
+  }
+}
+
+
 .site-header {
   background-color: $secondary-color;
   position: fixed;
   padding: 0.4rem;
   z-index: 1;
   top: 0;
+
+  .site-branding {
+    .logo-tall {
+      overflow: hidden;
+      margin-top: 10px;
+      display: block;
+      height: 0;
+      @include transition(height 1s ease);
+    }
+
+    .logo-linear {
+      overflow: hidden;
+      display: block;
+      @include transition(height 1s ease);
+    }
+  }
 
   .site-header-main {
     .categories {
@@ -29,6 +75,19 @@
 
   @media #{$small-only} {
     padding: 0;
+    position: static;
+    height: 116px !important;
+
+    .site-branding {
+      .logo-tall {
+        display: block;
+        height: auto;
+      }
+
+      .logo-linear {
+        display: none;
+      }
+    }
 
     .search-container {
       padding-top: .8rem;
@@ -46,7 +105,6 @@
     }
 
     .categories .mobile {
-      padding: 0.2rem;
       color: $white;
       font-weight: bold;
     }
