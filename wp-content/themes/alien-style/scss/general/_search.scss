@@ -1,6 +1,6 @@
 .search-form {
   .search-field {
-    width: 20rem;
+    width: 82%;
     height: 2.5rem;
     margin: 0;
     float: left;
@@ -12,11 +12,18 @@
   }
 
   .search-submit {
+    float: left;
     height: 2.5rem;
     padding: 6px 1rem;
     color: $dark-gray;
     font-size: 1.5rem;
     background-color: $white;
     @include border-radius-right(50px);
+  }
+
+  @media #{$small-only} {
+    .search-field {
+      width: 80%;
+    }
   }
 }

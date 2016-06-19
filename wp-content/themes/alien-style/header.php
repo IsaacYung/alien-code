@@ -20,6 +20,7 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php endif; ?>
 	<?php wp_head(); ?>
+	<meta name="theme-color" content="#69de00">
 </head>
 
 <body <?php body_class(); ?>>
@@ -28,14 +29,16 @@
 		<header id="masthead" class="site-header row full-width header" role="banner">
 			<div class="site-header-main">
 				<div class="site-branding medium-3 columns">
-					<a href="#"><img src="<?php echo get_template_directory_uri() . '/images/alien.png' ?>" alt="" /></a>
+					<a href="#" class="show-for-medium-up"><img src="<?php echo get_template_directory_uri() . '/images/alien.png' ?>" alt="" /></a>
+					<a href="#" class="show-for-small-only text-center"><img src="<?php echo get_template_directory_uri() . '/images/alien-mobile.png' ?>" alt="" /></a>
 				</div>
 				<div class="search-container medium-6 columns">
 					<?php get_search_form() ?>
 				</div>
 				<div class="medium-3 columns text-right">
 					<div class="categories">
-						<a href="#"><i class="icon-list2"></i></a>
+						<a href="#" class="large show-for-medium-up"><i class="icon-list2"></i></a>
+						<a href="#" class="mobile show-for-small-only text-center">Categories</a>
 					</div>
 				</div>
 

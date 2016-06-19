@@ -1,6 +1,7 @@
 .site-header {
   background-color: $secondary-color;
   position: fixed;
+  padding: 0.4rem;
   z-index: 1;
   top: 0;
 
@@ -8,7 +9,7 @@
     .categories {
       display: block;
       font-size: 3rem;
-      margin-top: 1.6rem;
+      margin-top: 1.8rem;
       margin-right: 2rem;
 
       i {
@@ -22,7 +23,32 @@
 
     .search-div {
       margin: 0 auto;
-      width: 24rem;
+      width: 20rem;
+    }
+  }
+
+  @media #{$small-only} {
+    padding: 0;
+
+    .search-container {
+      padding-top: .8rem;
+      height: 3rem;
+      padding: 4px;
+    }
+
+    .site-header-main .categories {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+
+    .search-container .search-div {
+      height: 2.7rem;
+    }
+
+    .categories .mobile {
+      padding: 0.2rem;
+      color: $white;
+      font-weight: bold;
     }
   }
 }
