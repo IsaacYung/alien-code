@@ -1,6 +1,9 @@
 .search-form {
   .search-field {
-    width: 82%;
+    display: block !important;
+    margin-left: 3rem !important;
+    width: 55%;
+    margin-left: 5rem;
     height: 2.5rem;
     margin: 0;
     float: left;
@@ -11,6 +14,13 @@
     font-weight: bold;
     color: $dark-gray;
     @include border-radius-left(50px);
+    @include transition(width 1s ease, margin-left 1s ease);
+  }
+
+  .search-field:hover {
+    margin-left: 0 !important;
+    width: 82%;
+    @include transition(width 1s ease, margin-left 1s ease);
   }
 
   .search-submit {
