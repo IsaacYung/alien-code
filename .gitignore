@@ -7,4 +7,10 @@
 # Ignore bundler config.
 wp-config.php
 
+/wp-content/themes/alien-style/assets
+/wp-content/themes/alien-style/bower_components
+/wp-content/themes/alien-style/node_modules
+/wp-content/themes/alien-style/assets
+
+
 # Ignore all logfiles and tempfiles.
