@@ -1,10 +1,13 @@
 var gulp = require('gulp-help')(require('gulp')),
     browserSync = require('browser-sync'),
     del = require('del'),
+    merge2 = require('merge2'),
     $ = require('gulp-load-plugins')(),
     // Assets diretories
     paths = {
       js: './js',
+      appJs: './js/app.js',
+      foundationJs: './js/foundation-setup.js',
       sass: './scss',
       images: './images',
       php: './**/*.php',
@@ -15,6 +18,9 @@ var gulp = require('gulp-help')(require('gulp')),
       algorithm: 'md5',
       hashLength: 10,
       template: '<%= name %>.<%= hash %><%= ext %>'
+    },
+    babelOptions = {
+      presets: ['es2015']
     };
 
 function addAssetToManifest(stream) {
@@ -69,12 +75,25 @@ gulp.task(
 
 gulp.task(
   'js',
-  'Perform "js:app" and minify JS assets files',
-  ['js:app'],
-    function() {
-    gulp.src(paths.assets + '/*.js')
+  'Include and compule JS files, minify then, put hash on file names and copy to assets folder',
+  ['clean:js'],
+  function() {
+    var stream;
+
+    stream = merge2(
+      gulp.src(paths.appJs).pipe($.include()),
+      gulp.src(paths.foundationJs)
+        .pipe($.include())
+        .pipe($.babel(babelOptions))
+    )
+      .pipe($.concat('app.js'))
       .pipe($.uglify())
+      .pipe($.hash(hashOptions))
       .pipe(gulp.dest(paths.assets));
+
+    addAssetToManifest(stream);
+
+    return stream;
   }
 );
 
