@@ -41,12 +41,12 @@ get_header(); ?>
 								 *
 								 * @param string $image_size Image size. Default 'large'.
 								 */
-								$image_size = apply_filters( 'twentysixteen_attachment_size', 'large' );
+								$image_size = apply_filters( 'alien_attachment_size', 'large' );
 
 								echo wp_get_attachment_image( get_the_ID(), $image_size );
 							?>
 
-							<?php twentysixteen_excerpt( 'entry-caption' ); ?>
+							<?php alien_excerpt( 'entry-caption' ); ?>
 
 						</div><!-- .entry-attachment -->
 
@@ -64,7 +64,7 @@ get_header(); ?>
 					</div><!-- .entry-content -->
 
 					<footer class="entry-footer">
-						<?php twentysixteen_entry_meta(); ?>
+						<?php alien_entry_meta(); ?>
 						<?php
 							// Retrieve attachment metadata.
 							$metadata = wp_get_attachment_metadata();

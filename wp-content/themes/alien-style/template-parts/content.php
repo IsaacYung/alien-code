@@ -17,9 +17,9 @@
 		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 	</header><!-- .entry-header -->
 
-	<?php twentysixteen_excerpt(); ?>
+	<?php alien_excerpt(); ?>
 
-	<?php twentysixteen_post_thumbnail(); ?>
+	<?php alien_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
@@ -41,7 +41,7 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php twentysixteen_entry_meta(); ?>
+		<?php alien_entry_meta(); ?>
 		<?php
 			edit_post_link(
 				sprintf(
