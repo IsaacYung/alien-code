@@ -73,7 +73,7 @@
     }
   }
 
-  @media #{$small-only} {
+  @include breakpoint(small only) {
     padding: 0;
     position: static;
     height: 116px !important;

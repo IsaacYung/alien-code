@@ -33,9 +33,10 @@
     @include border-radius-right(50px);
   }
 
-  @media #{$small-only} {
+  @include breakpoint(small only) {
     .search-field {
-      width: 80%;
+      width: 82%;
+      margin-left: 0rem !important;
     }
   }
 }

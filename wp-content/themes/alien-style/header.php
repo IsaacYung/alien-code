@@ -28,7 +28,7 @@
 	<div class="site-inner">
 		<header id="masthead" class="site-header row full-width header on-top" role="banner">
 			<div class="site-header-main">
-				<div class="site-branding medium-3 columns small-text-center medium-text-left">
+				<div class="site-branding medium-3 columns text-center medium-text-left">
 					<a href="#" class="logo-linear "><img src="<?php echo get_template_directory_uri() . '/images/alien.png' ?>" alt="" /></a>
 					<a href="#" class="logo-tall"><img src="<?php echo get_template_directory_uri() . '/images/alien-mobile.png' ?>" alt="" /></a>
 				</div>
@@ -37,7 +37,7 @@
 				</div>
 				<div class="medium-3 columns text-right">
 					<div class="categories">
-						<a href="#" class="large show-for-medium-up"><i class="icon-list2"></i></a>
+						<a href="#" class="large show-for-medium"><i class="icon-list2"></i></a>
 					</div>
 				</div>
 
