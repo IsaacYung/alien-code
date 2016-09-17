@@ -1,0 +1,22 @@
+article {
+  margin-bottom: 2rem;
+}
+
+.thumbnail-container {
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.post-thumbnail {
+  display: block;
+}
+
+.entry-content {
+  a {
+    color: $black;
+  }
+}

@@ -29,7 +29,7 @@
 
 
 .site-header {
-  background-color: $secondary-color;
+  background-color: transparentize($secondary-color, 0.2);
   position: fixed;
   padding: 0.4rem;
   z-index: 1;
