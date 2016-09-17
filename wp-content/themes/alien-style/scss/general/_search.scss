@@ -14,13 +14,13 @@
     font-weight: bold;
     color: $dark-gray;
     @include border-radius-left(50px);
-    @include transition(width 1s ease, margin-left 1s ease);
+    @include transition(width 700ms ease, margin-left 700ms ease);
   }
 
   .search-field:hover {
     margin-left: 0 !important;
     width: 82%;
-    @include transition(width 1s ease, margin-left 1s ease);
+    @include transition(width 700ms ease, margin-left 700ms ease);
   }
 
   .search-submit {

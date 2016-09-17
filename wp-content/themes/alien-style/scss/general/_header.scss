@@ -1,29 +1,29 @@
 .site-inner .off-top {
   height: 80px;
-  @include transition(height 1s ease);
+  @include transition(height 700ms ease);
 
   .search-container {
     padding-top: .8rem;
-      @include transition(padding-top 1s ease);
+      @include transition(padding-top 700ms ease);
   }
 
   .site-header-main .categories {
-    @include transition(margin-top 1s ease);
+    @include transition(margin-top 700ms ease);
     margin-top: 0;
   }
 }
 
 .site-inner .on-top {
   height: 138px;
-  @include transition(height 1s ease);
+  @include transition(height 700ms ease);
 
 
   .search-container {
-      @include transition(padding-top 1s ease);
+      @include transition(padding-top 700ms ease);
   }
 
   .site-header-main .categories {
-    @include transition(margin-top 1s ease);
+    @include transition(margin-top 700ms ease);
   }
 }
 
@@ -41,13 +41,13 @@
       margin-top: 10px;
       display: block;
       height: 0;
-      @include transition(height 1s ease);
+      @include transition(height 700ms ease);
     }
 
     .logo-linear {
       overflow: hidden;
       display: block;
-      @include transition(height 1s ease);
+      @include transition(height 700ms ease);
     }
   }
 
@@ -61,12 +61,12 @@
       button {
         padding: 8px;
         @include border-radius(5px);
-        @include transition(background-color 600ms ease);
+        @include transition(background-color 700ms ease);
       }
 
       button:hover {
         background-color: $primary-color;
-        @include transition(background-color 600ms ease);
+        @include transition(background-color 700ms ease);
       }
 
       i {

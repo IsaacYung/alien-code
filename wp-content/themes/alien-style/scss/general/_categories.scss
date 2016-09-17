@@ -1,20 +1,20 @@
 .off-top-categories {
   top: 5rem !important;
-  @include transition(all 1s ease);
+  @include transition(all 700ms ease);
 }
 
 .on-top-categories {
   top: 8.6rem !important;
-  @include transition(all 1s ease);
+  @include transition(all 700ms ease);
 }
 
 .show-categories {
   right: 0 !important;
-  @include transition(all 400ms ease);
+  @include transition(all 700ms ease);
 }
 
 .categories-container {
-  background-color: $gren;
+  background-color: $green;
   color: $white;
   font-weight: bold;
   position: fixed;
@@ -22,5 +22,5 @@
   top: 8.6rem;
   padding: 2rem 2.5rem !important;
   height: 100%;
-  @include transition(all 400ms ease);
+  @include transition(all 700ms ease);
 }
