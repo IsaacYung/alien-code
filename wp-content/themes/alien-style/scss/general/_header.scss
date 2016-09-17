@@ -9,7 +9,7 @@
 
   .site-header-main .categories {
     @include transition(margin-top 1s ease);
-    margin-top: 2px;
+    margin-top: 0;
   }
 }
 
@@ -56,9 +56,21 @@
       display: block;
       font-size: 3rem;
       margin-top: 1.8rem;
-      margin-right: 2rem;
+      margin-right: 0.3rem;
+
+      button {
+        padding: 8px;
+        @include border-radius(5px);
+        @include transition(background-color 600ms ease);
+      }
+
+      button:hover {
+        background-color: $primary-color;
+        @include transition(background-color 600ms ease);
+      }
 
       i {
+        display: inline-block;
         color: $white;
       }
     }

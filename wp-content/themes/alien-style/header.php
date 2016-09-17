@@ -37,7 +37,7 @@
 				</div>
 				<div class="medium-3 columns text-right">
 					<div class="categories">
-						<a href="#" class="large show-for-medium"><i class="icon-list2"></i></a>
+						<button href="" clbuttonss="large show-for-medium"><i class="icon-list2"></i></button>
 					</div>
 				</div>
 
@@ -92,6 +92,7 @@
 					</a>
 				</div><!-- .header-image -->
 			<?php endif; // End header image check. ?>
+			<?php get_template_part( 'template-parts/categories', 'page' ); ?>
 		</header><!-- .site-header -->
 
 		<div id="content" class="site-content">
