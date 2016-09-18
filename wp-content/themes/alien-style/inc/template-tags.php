@@ -18,16 +18,6 @@ if ( ! function_exists( 'alien_entry_meta' ) ) :
  * @since Alien Style 1.0
  */
 function alien_entry_meta() {
-	if ( 'post' === get_post_type() ) {
-		$author_avatar_size = apply_filters( 'alien_author_avatar_size', 49 );
-		printf( '<span class="byline"><span class="author vcard">%1$s<span class="screen-reader-text">%2$s </span> <a class="url fn n" href="%3$s">%4$s</a></span></span>',
-			get_avatar( get_the_author_meta( 'user_email' ), $author_avatar_size ),
-			_x( 'Author', 'Used before post author name.', 'twentysixteen' ),
-			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-			get_the_author()
-		);
-	}
-
 	if ( in_array( get_post_type(), array( 'post', 'attachment' ) ) ) {
 		alien_entry_date();
 	}
@@ -44,12 +34,6 @@ function alien_entry_meta() {
 	if ( 'post' === get_post_type() ) {
 		alien_entry_taxonomies();
 	}
-
-	if ( ! is_singular() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-		echo '<span class="comments-link">';
-		comments_popup_link( sprintf( __( 'Leave a comment<span class="screen-reader-text"> on %s</span>', 'twentysixteen' ), get_the_title() ) );
-		echo '</span>';
-	}
 }
 endif;
 
@@ -64,10 +48,6 @@ if ( ! function_exists( 'alien_entry_date' ) ) :
 function alien_entry_date() {
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 
-	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
-	}
-
 	$time_string = sprintf( $time_string,
 		esc_attr( get_the_date( 'c' ) ),
 		get_the_date(),
@@ -75,9 +55,7 @@ function alien_entry_date() {
 		get_the_modified_date()
 	);
 
-	printf( '<span class="posted-on"><span class="screen-reader-text">%1$s </span><a href="%2$s" rel="bookmark">%3$s</a></span>',
-		_x( 'Posted on', 'Used before publish date.', 'twentysixteen' ),
-		esc_url( get_permalink() ),
+	printf( '<span class="posted-on"><span class="screen-reader-text">%1$s</span>',
 		$time_string
 	);
 }

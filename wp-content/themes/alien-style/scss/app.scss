@@ -10,6 +10,7 @@
 @import 'general/mixins';
 @import 'general/iconfont';
 @import 'general/header';
+@import 'general/footer';
 @import 'general/standard';
 @import 'general/categories';
 @import 'general/search';
@@ -17,5 +18,8 @@
 
 /* ------------ Page styles ------------- */
 @import 'page/index';
+
+/* ------------ Widgets ------------- */
+@import 'widget/sidebar-right';
 
 /* ------------ Templates ------------- */

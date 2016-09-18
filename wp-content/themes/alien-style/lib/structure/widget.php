@@ -10,7 +10,7 @@
 function ac_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Sidebar', 'ac' ),
-		'id'            => 'sidebar-1',
+		'id'            => 'sidebar',
 		'description'   => __( 'Add widgets here to appear in your sidebar.', 'ac' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
@@ -19,8 +19,8 @@ function ac_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Content Bottom 1', 'ac' ),
-		'id'            => 'sidebar-2',
+		'name'          => __( 'Content Bottom', 'ac' ),
+		'id'            => 'sidebar-bottom',
 		'description'   => __( 'Appears at the bottom of the content on posts and pages.', 'ac' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
@@ -29,8 +29,8 @@ function ac_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Content Bottom 2', 'ac' ),
-		'id'            => 'sidebar-3',
+		'name'          => __( 'Content Right', 'ac' ),
+		'id'            => 'sidebar-right',
 		'description'   => __( 'Appears at the bottom of the content on posts and pages.', 'ac' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',

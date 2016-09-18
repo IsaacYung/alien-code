@@ -2,6 +2,16 @@ article {
   margin-bottom: 2rem;
 }
 
+.sharing {
+  .publish-time {
+
+  }
+}
+
+.site-main {
+  padding-top: 1rem;
+}
+
 .thumbnail-container {
   overflow: hidden;
 
@@ -23,6 +33,6 @@ article {
 
 @include breakpoint(medium up) {
   .thumbnail-container {
-    max-width: 21rem;
+    max-width: 19rem;
   }
 }

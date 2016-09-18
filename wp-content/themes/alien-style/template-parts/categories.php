@@ -8,7 +8,7 @@
  */
 ?>
 
-<div class="categories-container row medium-2 columns">
+<div class="categories-container row medium-2 columns show-for-medium">
   <ul class="no-bullet">
     <li>Javascript</li>
     <li>Wordpress</li>

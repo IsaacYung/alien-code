@@ -16,8 +16,8 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main row" role="main">
+	<div id="primary" class="content-area row full-width">
+		<main id="main" class="site-main medium-10 columns" role="main">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -28,7 +28,10 @@ get_header(); ?>
 			<?php endif; ?>
 
 			<?php
-			// Start the loop.
+			if ( have_posts() ) : the_post();
+				get_template_part( 'template-parts/content_first', get_post_format() );
+			endif;
+
 			while ( have_posts() ) : the_post();
 
 				/*
@@ -54,8 +57,8 @@ get_header(); ?>
 
 		endif;
 		?>
-
 		</main><!-- .site-main -->
+		<?php get_sidebar( 'content-right' ); ?>
 	</div><!-- .content-area -->
 
 <?php get_footer(); ?>

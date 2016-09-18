@@ -94,5 +94,4 @@
 			<?php endif; // End header image check. ?>
 			<?php get_template_part( 'template-parts/categories', 'page' ); ?>
 		</header><!-- .site-header -->
-
 		<div id="content" class="site-content">
