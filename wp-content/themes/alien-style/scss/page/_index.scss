@@ -1,3 +1,30 @@
+.first-post {
+  position: relative;
+  background-size: cover;
+  min-height: 430px;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  padding: 2.5rem 0.5rem;
+  color: $white;
+  margin: 0;
+  padding: 0;
+  padding-top: 3rem;
+
+  a {
+    font-size: 4rem;
+  }
+
+  .excerpt-content {
+    position: absolute;
+    padding: 15px;
+    font-size: 19px;
+    bottom: 0;
+    min-height: 6.5rem;
+    max-height: 10rem;
+    background-color: transparentize($black, 0.3);
+  }
+}
+
 article {
   margin-bottom: 2rem;
 }

@@ -8,28 +8,21 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'first-post' ); ?> style="background-image: url(<?php the_field( 'first_featured_image' ); ?>); background-color: <?php the_field( 'background_featured_color' ); ?>">
 	<header class="entry-header">
 		<?php if ( is_sticky() && is_home() && ! is_paged() ) : ?>
 			<span class="sticky-post"><?php _e( 'Featured', 'twentysixteen' ); ?></span>
 		<?php endif; ?>
 	</header>
 	<!-- .entry-header -->
-	<div class="row">
+	<div class="">
 		<div class="thumbnail-container medium-3 columns">
 			<?php alien_post_thumbnail(); ?>
 		</div>
-
 		<div class="entry-content medium-8 columns end">
-			<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+			<h1 class="entry-title"><a href="<?php echo esc_url( get_permalink() ) ?>" style="color: <?php the_field( 'font_color' ); ?>;" rel="bookmark"><?php the_title(); ?></a></h1>
 			<?php alien_excerpt(); ?>
 			<?php
-			/* translators: %s: Name of current post */
-			the_content( sprintf(
-			__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentysixteen' ),
-			get_the_title()
-			) );
-
 			wp_link_pages( array(
 				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentysixteen' ) . '</span>',
 				'after'       => '</div>',
@@ -42,6 +35,17 @@
 			<div class="row columns sharing">
 			</div>
 		</div><!-- .entry-content -->
+	</div>
+	<div class="excerpt-content columns">
+		<div class="row medium-10 columns">
+			<?php
+			/* translators: %s: Name of current post */
+			the_content( sprintf(
+			__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentysixteen' ),
+			get_the_title()
+			) );
+			?>
+		</div>
 	</div>
 	<footer class="entry-footer float-right">
 		<?php

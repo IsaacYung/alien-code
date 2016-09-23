@@ -17,6 +17,13 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area row full-width">
+		<main>
+			<?php
+				if ( have_posts() ) : the_post();
+					get_template_part( 'template-parts/content_first', get_post_format() );
+				endif;
+			?>
+		</main>
 		<main id="main" class="site-main medium-10 columns" role="main">
 
 		<?php if ( have_posts() ) : ?>
@@ -28,10 +35,6 @@ get_header(); ?>
 			<?php endif; ?>
 
 			<?php
-			if ( have_posts() ) : the_post();
-				get_template_part( 'template-parts/content_first', get_post_format() );
-			endif;
-
 			while ( have_posts() ) : the_post();
 
 				/*
