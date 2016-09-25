@@ -7,22 +7,16 @@
  * @since Alien Style 1.0
  */
 
-if ( ! is_active_sidebar( 'sidebar-2' ) && ! is_active_sidebar( 'sidebar-3' ) ) {
+if ( ! is_active_sidebar( 'sidebar-bottom' ) ) {
 	return;
 }
 
 // If we get this far, we have widgets. Let's do this.
 ?>
-<aside id="content-bottom-widgets" class="content-bottom-widgets" role="complementary">
-	<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
+<aside id="content-bottom-widgets" class="content-right-widgets medium-10 columns" role="complementary">
+	<?php if ( is_active_sidebar( 'sidebar-bottom' ) ) : ?>
 		<div class="widget-area">
-			<?php dynamic_sidebar( 'sidebar-2' ); ?>
-		</div><!-- .widget-area -->
-	<?php endif; ?>
-
-	<?php if ( is_active_sidebar( 'sidebar-3' ) ) : ?>
-		<div class="widget-area">
-			<?php dynamic_sidebar( 'sidebar-3' ); ?>
+			<?php dynamic_sidebar( 'sidebar-bottom' ); ?>
 		</div><!-- .widget-area -->
 	<?php endif; ?>
 </aside><!-- .content-bottom-widgets -->

@@ -16,7 +16,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area row full-width">
+	<div id="primary" class="row full-width">
 		<main>
 			<?php
 				if ( have_posts() ) : the_post();
