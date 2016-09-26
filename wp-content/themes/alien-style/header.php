@@ -29,8 +29,8 @@
 		<header id="masthead" class="site-header row full-width header on-top" role="banner">
 			<div class="site-header-main">
 				<div class="site-branding medium-3 columns text-center medium-text-left">
-					<a href="#" class="logo-linear "><img src="<?php echo get_template_directory_uri() . '/images/alien.png' ?>" alt="" /></a>
-					<a href="#" class="logo-tall"><img src="<?php echo get_template_directory_uri() . '/images/alien-mobile.png' ?>" alt="" /></a>
+					<a href="/" class="logo-linear "><img src="<?php echo get_template_directory_uri() . '/images/alien.png' ?>" alt="" /></a>
+					<a href="/" class="logo-tall"><img src="<?php echo get_template_directory_uri() . '/images/alien-mobile.png' ?>" alt="" /></a>
 				</div>
 				<div class="search-container medium-6 columns">
 					<?php get_search_form() ?>

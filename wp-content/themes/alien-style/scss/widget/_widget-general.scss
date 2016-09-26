@@ -1,0 +1,16 @@
+.widget-title {
+  text-align: center;
+  font-size: 1.5rem;
+  background-color: $green;
+  color: $white;
+}
+
+.widget {
+  ul {
+    @extend .no-bullet;
+  }
+
+  a {
+    color: black;
+  }
+}

@@ -12,7 +12,7 @@
 @import 'general/header';
 @import 'general/footer';
 @import 'general/standard';
-@import 'general/categories';
+@import 'general/menu';
 @import 'general/search';
 @import 'general/page';
 
@@ -21,6 +21,8 @@
 @import 'page/single-post';
 
 /* ------------ Widgets ------------- */
+@import 'widget/widget-general';
 @import 'widget/sidebar-right';
+@import 'widget/widget-archive';
 
 /* ------------ Templates ------------- */

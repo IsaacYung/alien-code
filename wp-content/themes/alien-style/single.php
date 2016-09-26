@@ -26,7 +26,7 @@ get_header(); ?>
 	<?php get_sidebar( 'content-right' ); ?>
 
 	<div class="comments medium-10 columns end">
-		<?php get_sidebar( 'content-bottom' ); ?>
+		<?php get_template_part( 'template-parts/content_comments'); ?>
 	</div>
 </div><!-- .content-area -->
 
