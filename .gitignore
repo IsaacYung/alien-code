@@ -5,7 +5,7 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore bundler config.
-wp-config.php
+# wp-config.php
 
 /wp-content/themes/alien-style/assets
 /wp-content/themes/alien-style/bower_components
