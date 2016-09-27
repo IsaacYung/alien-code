@@ -17,12 +17,6 @@
 		<?php endif; ?>
 	</header>
 	<!-- .entry-header -->
-<<<<<<< HEAD
-	<div class="row">
-		<div class="thumbnail-container medium-3 columns">
-			<?php the_post_thumbnail('thumbnail'); ?>
-		</div>
-=======
 	<div class="row article-list columns">
     <div class="thumbnail-container medium-3 columns">
       <?php echo wp_get_attachment_image( $image, 'full' ); ?>
@@ -38,7 +32,6 @@
         );
       ?>
     </div>
->>>>>>> ca1a89bde56ebe9cc7c44b48dfb15d27db531b6d
 
     <div class="entry-content medium-8 columns end">
       <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
