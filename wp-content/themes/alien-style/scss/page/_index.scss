@@ -1,5 +1,52 @@
+.first-post {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  padding: 2.5rem 0.5rem;
+  color: $white;
+  margin: 0;
+  padding: 0;
+
+  a {
+    font-size: 4rem;
+  }
+
+  h1 {
+    text-shadow: 1px 1px 16px $black;
+  }
+
+  .excerpt-content {
+    padding: 15px;
+    font-size: 19px;
+    bottom: 0;
+    background-color: transparentize($black, 0.3);
+  }
+
+  .title-thumb {
+    padding: 2rem;
+  }
+}
+
+@include breakpoint(medium up) {
+  .first-post {
+    padding-top: 8.6rem;
+  }
+}
+
+.article-list {
+  margin: 10px;
+  padding: 10px;
+  @include shadow(1px);
+}
+
+.article-list:hover {
+  margin: 10px;
+  padding: 10px;
+  @include shadow(0px);
+}
+
 article {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .sharing {

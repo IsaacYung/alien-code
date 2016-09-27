@@ -1,5 +1,32 @@
 .site-footer {
-  background-color: $green;
-  height: 14rem;
+  background-color: $dark-gray;
+  padding-top: 1rem;
   z-index: 1;
+
+  a {
+    color: $white;
+  }
+
+  a:hover {
+    color: $green;
+  }
+
+  .copyright {
+    background-color: lighten($black, 6%);
+    color: $green;
+  }
+
+  .site-info {
+    color: $white;
+  }
+
+  .social-links-container {
+    padding-top: 2rem;
+    padding-right: 4%;
+  }
+}
+
+.social-links {
+  display: inline-block;
+  font-size: 1.8rem;
 }
