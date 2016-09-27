@@ -17,7 +17,7 @@
 	<!-- .entry-header -->
 	<div class="row">
 		<div class="thumbnail-container medium-3 columns">
-			<?php alien_post_thumbnail(); ?>
+			<?php the_post_thumbnail('thumbnail'); ?>
 		</div>
 
 		<div class="entry-content medium-8 columns end">
