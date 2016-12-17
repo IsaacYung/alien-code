@@ -28,7 +28,8 @@
  include_once get_stylesheet_directory() . "/lib/structure/script.php";
  include_once get_stylesheet_directory() . "/lib/structure/head.php";
  include_once get_stylesheet_directory() . "/lib/structure/widget.php";
-  include_once get_stylesheet_directory() . "/lib/structure/menu.php";
+ include_once get_stylesheet_directory() . "/lib/structure/menu.php";
+
 
 if ( ! function_exists( 'ac_setup' ) ) :
 /**
