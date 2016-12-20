@@ -1,5 +1,16 @@
+.content-single {
+  margin-top: 5rem;
+
+  .entry-title {
+    padding-bottom: 3rem;
+    font-weight: bold;
+    color: $dark-gray;
+  }
+}
+
 @include breakpoint(medium up) {
   .content-single {
     padding: 0 10%;
+    margin-top: 3rem;
   }
 }

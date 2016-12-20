@@ -34,7 +34,7 @@
 		</div>
 		<div class="entry-title medium-8 columns end">
 			<h1 class="entry-title"><a href="<?php echo esc_url( get_permalink() ) ?>" style="color: <?php the_field( 'font_color' ); ?>;" rel="bookmark"><?php the_title(); ?></a></h1>
-			<?php alien_excerpt(); ?>
+
 			<?php
 			wp_link_pages( array(
 				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentysixteen' ) . '</span>',
@@ -51,13 +51,7 @@
 	</div>
 	<div class="excerpt-content columns">
 		<div class="row medium-10 columns">
-			<?php
-			/* translators: %s: Name of current post */
-			the_content( sprintf(
-			__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentysixteen' ),
-			get_the_title()
-			) );
-			?>
+			<?php alien_excerpt(); ?>
 		</div>
 	</div>
 	<footer class="entry-footer float-right">

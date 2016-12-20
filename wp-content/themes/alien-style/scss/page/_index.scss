@@ -36,13 +36,13 @@
 .article-list {
   margin: 10px;
   padding: 10px;
-  @include shadow(1px);
+  @include transition(background-color 400ms);
 }
 
 .article-list:hover {
   margin: 10px;
   padding: 10px;
-  @include shadow(0px);
+  background-color: $light-gray;
 }
 
 article {
