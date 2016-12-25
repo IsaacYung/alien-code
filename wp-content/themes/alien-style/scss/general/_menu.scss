@@ -17,11 +17,23 @@
   background-color: $green;
   color: $white;
   font-weight: bold;
-  position: fixed;
-  right: -16.66667%;
-  top: 8.6rem;
+  position: absolute;
+  right: -100%;
+  top: 7rem;
   height: 100%;
   @include transition(all 700ms ease);
+
+  @include breakpoint(medium only) {
+    right: -33.66667%;
+    position: fixed;
+    top: 8.6rem;
+  };
+
+  @include breakpoint(large up) {
+    right: -16.66667%;
+    position: fixed;
+
+  };
 
   .social-container {
     padding: 2rem 1rem;

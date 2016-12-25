@@ -23,6 +23,11 @@
   .social-links-container {
     padding-top: 2rem;
     padding-right: 4%;
+    text-align: center;
+
+    @include breakpoint(medium only) {
+      text-align: right;
+    }
   }
 }
 

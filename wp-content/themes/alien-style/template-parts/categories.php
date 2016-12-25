@@ -8,7 +8,7 @@
  */
 ?>
 
-<div class="categories-container row medium-2 columns show-for-medium">
+<div class="categories-container row medium-4 large-2 columns">
   <?php if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) ) : ?>
     <div id="site-header-menu" class="site-header-menu columns">
       <?php if ( has_nav_menu( 'primary' ) ) : ?>

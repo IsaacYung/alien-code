@@ -24,7 +24,7 @@ get_header(); ?>
 				endif;
 			?>
 		</main>
-		<main id="main" class="site-main medium-10 columns" role="main">
+		<main id="main" class="site-main medium-8 large-10 columns" role="main">
 
 		<?php if ( have_posts() ) : ?>
 

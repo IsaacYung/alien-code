@@ -10,7 +10,7 @@
 get_header(); ?>
 
 <div id="primary" class="content-area row full-width">
-	<main id="main" class="site-main medium-10 columns" role="main">
+	<main id="main" class="site-main medium-8 large-10 columns" role="main">
 		<?php
 			// Start the loop.
 			the_post();
@@ -25,7 +25,7 @@ get_header(); ?>
 	</main><!-- .site-main -->
 	<?php get_sidebar( 'content-right' ); ?>
 
-	<div class="comments medium-10 columns end">
+	<div class="comments medium-8 large-10 columns end">
 		<?php get_template_part( 'template-parts/content_comments'); ?>
 	</div>
 </div><!-- .content-area -->

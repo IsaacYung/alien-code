@@ -8,6 +8,16 @@
   }
 }
 
+.single-post {
+  .featured_image {
+    padding: 0;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
 @include breakpoint(medium up) {
   .content-single {
     padding: 0 10%;

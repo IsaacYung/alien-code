@@ -58,6 +58,15 @@
       margin-top: 1.8rem;
       margin-right: 0.3rem;
 
+      @include breakpoint(small only) {
+        position: absolute;
+        top: 3px;
+        right: 3px;
+        i {
+          font-size: 32px;
+        }
+      }
+
       button {
         padding: 8px;
         @include border-radius(5px);

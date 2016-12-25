@@ -13,7 +13,7 @@ if ( ! is_active_sidebar( 'sidebar-right' ) ) {
 
 // If we get this far, we have widgets. Let's do this.
 ?>
-<aside id="content-bottom-widgets" class="content-right-widgets medium-2 columns" role="complementary">
+<aside id="content-bottom-widgets" class="content-right-widgets medium-4 large-2 columns" role="complementary">
 	<?php if ( is_active_sidebar( 'sidebar-right' ) ) : ?>
 		<div class="widget-area">
 			<?php dynamic_sidebar( 'sidebar-right' ); ?>

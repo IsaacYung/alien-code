@@ -23,7 +23,7 @@
           ?>
         </nav><!-- .main-navigation -->
 			</div>
-			<div class="medium-3 columns text-right social-links-container">
+			<div class="medium-3 columns social-links-container">
 				<ul class="inline-list social-links">
 					<li><a href="https://github.com/IsaacYung/alien-code"><i class="icon-github"></i></a></li>
 					<li><a href=""><i id="facebook-share" class="icon-facebook2"></i></a></li>

@@ -15,8 +15,8 @@
 		<?php endif; ?>
 	</header>
 	<!-- .entry-header -->
-	<div class="row columns">
-		<div class="columns text-center" style="background-color: <?php the_field( 'background_featured_color' ); ?>">
+	<div class="row columns single-post">
+		<div class="columns text-center featured_image" style="background-color: <?php the_field( 'background_featured_color' ); ?>">
 			<?php alien_post_thumbnail(); ?>
 		</div>
 
